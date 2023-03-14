@@ -1,0 +1,270 @@
+.selectric {
+  background: $color-white;
+  border-radius: 6px;
+  height: 48px;
+  border: none;
+.label{
+  font-size: 16px;
+  font-weight: normal;
+  height: 100%;
+  padding-top: 6px;
+  color: $color-dark-blue-grey;
+}
+
+  .button {
+    content: '';
+    width: 6px;
+    height: 6px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(45deg);
+    border-bottom: solid 2px $color-lipstick;
+    border-right: solid 2px $color-lipstick;
+    position: absolute;
+    right: 15px;
+    pointer-events: none;
+    padding: 0;
+    line-height: 1px;
+    font-weight: normal;
+    top: 15px;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+.selectric-items { 
+  ul {
+    background-color: #FFFFFF;
+    li {
+      &.highlighted{
+        font-weight: bold;
+        background: none;
+      }
+      font-family: $font-family-text;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.5;
+      letter-spacing: normal;
+      color: $color-dark-blue-grey;
+      background-color: transparent;
+      &:hover{
+        background-color: $color-ice-blue;
+        color: $color-lipstick;
+        font-weight: bold;
+      }
+      &.highlighted{
+        background: $color-ice-blue;
+        font-weight: bold;
+        color:$color-lipstick;
+        outline: -webkit-focus-ring-color auto 5px;
+
+      }
+      &.selected{
+        background: $color-ice-blue;
+        font-weight: bold;
+        color:$color-lipstick;
+      }
+    }
+  }
+}
+
+.RptClaimSelect{
+//   width: 297px;
+  margin: 0 auto;
+  &.selectric-open{
+    .selectric{
+
+      .label{
+        color:$color-lipstick;
+        font-weight: bold;
+      }
+    }
+  }
+  .selectric {
+    height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    border: solid 2px $color-lipstick;
+    display: table;
+
+    .label {
+      height: 100%;
+      font-family: $font-family-text;
+      font-size: 16px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $color-dark-blue-grey;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0 38px 0 10px;
+    }
+
+    .button {
+      content: '';
+      width: 9px;
+      height: 9px;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(45deg);
+      border-bottom: solid 2px $color-lipstick;
+      border-right: solid 2px $color-lipstick;
+      position: absolute;
+      right: 15px;
+      pointer-events: none;
+      padding: 0;
+      line-height: 1px;
+      font-weight: normal;
+      top: 15px;
+      border-radius: 0;
+    }
+  }
+.selectric-items {
+  //transform: translateX(-50%);
+  //left: 50%;
+  border: solid 2px $color-lipstick;
+  border-top: none;
+  z-index: 1;
+  top: 75%;
+  border-radius: 6px;
+  box-shadow: none;
+  ul{
+    padding: 0;
+    li{
+      height: 100%;
+      width: 100%;
+      border-bottom: 1px solid $color-cool-grey;
+      padding: 15px 10px;
+      font-weight: bold;
+      &.highlighted{
+        font-weight: bold;
+        background-color: $color-ice-blue;
+        color: $color-lipstick;
+      }
+      &:first-child{
+        display: none;
+      }
+      &:hover{
+        background-color: $color-ice-blue;
+        color: $color-lipstick;
+      }
+    }
+  }
+  }
+}
+.contact-form {
+
+  .selectric{
+    &-open {
+      .selectric{
+      background-color: transparent;
+      border:solid 2px $color-cloudy-blue;
+      border-radius: 6px 6px 0 0;
+      + .selectric-items ul{
+        background-color: #FFFFFF;
+
+      }
+    }
+      &.selectric-below{
+        .selectric{
+          border-radius: 6px 6px 0 0;
+        }
+      }
+      &.selectric-above{
+        .selectric {
+          border-radius: 0 0 6px 6px;
+        }
+      }
+    }
+    background-color: $color-ice-blue;
+  }
+  .selectric-items ul{
+    background-color: $color-ice-blue;
+    li{
+    &:first-child{
+      display: none;
+    }
+    }
+  }
+}
+.claim-form-modal {
+  .selectric {
+    background: $color-ice-blue;
+&-open{
+  .selectric {
+    background: transparent;
+    border:solid 2px $color-cloudy-blue;
+    + .selectric-items ul {
+      background-color: #FFFFFF;
+    }
+  }
+  &.selectric-below{
+   .selectric{
+     border-radius: 6px 6px 0 0;
+   }
+  }
+  &.selectric-above{
+    .selectric {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}
+
+    .label {
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .button {
+      content: '';
+      width: 9px;
+      height: 9px;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(45deg);
+      border-bottom: solid 2px $color-dark-blue-grey;
+      border-right: solid 2px $color-dark-blue-grey;
+      position: absolute;
+      right: 15px;
+      pointer-events: none;
+      padding: 0;
+      line-height: 1px;
+      font-weight: normal;
+      top: 15px;
+      border-radius: 0;
+    }
+  }
+  .selectric-items ul{
+    background-color: $color-ice-blue;
+    padding: 0;
+    li{
+      &:hover{
+        background: $color-ice-blue;
+        font-weight: bold;
+        color:$color-lipstick;
+      }
+      &.highlighted{
+        background: $color-ice-blue;
+        font-weight: bold;
+        color:$color-lipstick;
+      }
+      &.selected{
+        background: $color-ice-blue;
+        font-weight: bold;
+        color:$color-lipstick;
+      }
+      &:first-child{
+        display: none;
+      }
+    }
+  }
+}
+.frm_blank_field {
+  .frm_blank_field {
+    .selectric {
+      .button {
+        visibility: hidden;
+      }
+    }
+  }
+}

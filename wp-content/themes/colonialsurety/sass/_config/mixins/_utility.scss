@@ -1,0 +1,9 @@
+@mixin underline() {
+  text-decoration: none;
+  box-shadow: 0 1px $color-lipstick;
+}
+
+@mixin no-underline() {
+  text-decoration: none;
+  box-shadow: none;
+}

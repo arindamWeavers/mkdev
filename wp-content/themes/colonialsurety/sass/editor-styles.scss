@@ -1,0 +1,17 @@
+@charset "UTF-8";
+// Separate editor config styles to be loaded into admin so the WYSIWYG editors share some of the styles
+/*!
+========== CONFIG
+*/
+// configuration settings, no file should output actual markup
+@import '_config/__config';
+
+body {
+  color: $color-colonial-blue;
+  font-family: $font-family-text;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@import 'components/button';
+@import 'specifics/editor-styles';

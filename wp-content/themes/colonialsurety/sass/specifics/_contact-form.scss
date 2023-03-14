@@ -1,0 +1,96 @@
+.page-template-contact-page{
+	.sectionWrapper {
+max-width: 1440px;
+		margin: 0 auto;
+		.contact-form {
+			margin-top: 36px;
+			position: relative;
+
+			&.full {
+				width: 100%;
+			}
+
+			&.side {
+				width: calc(100% - 400px);
+				max-width: 1140px;
+				float: left;
+				@include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+					margin-left: 0;
+				}
+
+				@include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+					float: none;
+					width: 100%;
+				}
+
+				.form {
+					max-width: 760px;
+					padding: 0 13.463%;
+					box-sizing: content-box;
+					margin: 0 0 0 auto;
+					@include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+						padding: 0 5.334%;
+					}
+
+					div.frm_forms.frm_style_formidable-style.with_frm_style {
+						.frm_form_fields {
+							fieldset {
+								.frm_form_title {
+									margin-top: 24px;
+									@include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+										margin-top: 14px;
+									}
+								}
+
+								.frm_description {
+									p {
+										@include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+											font-size: 13px;
+											line-height: 1.85;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.frm_message {
+						padding: 0;
+						border: 0;
+						height: 300px;
+					}
+
+					.form-confirmation-contact {
+						text-align: center;
+						font-family: $font-family-text;
+						position: absolute;
+						left: 0;
+						top: -35px;
+						z-index: 9;
+						width: 100vw;
+						min-height: 300px;
+
+						img {
+							width: 48px;
+							height: 48px;
+							margin-top: 80px;
+							margin-bottom: 20px;
+						}
+
+						.header {
+							font-size: 36px;
+							line-height: 1.22;
+						}
+
+						.info {
+							font-size: 20px;
+							line-height: 1.5;
+							margin-bottom: 80px;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

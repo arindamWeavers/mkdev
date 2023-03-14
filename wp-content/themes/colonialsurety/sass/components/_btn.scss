@@ -1,0 +1,27 @@
+.btn {
+  display: inline-flex;
+  height: 46px; /* Setting height lower than min-height will fix align-items in IE11 */
+  min-height: 47px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  font-family: $font-family-text;
+  font-size: $font-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height;
+  text-align: center;
+  border-radius: 6px;
+  background-color: $color-lipstick;
+  transition: background-color $transition-length $transition-type;
+  &:hover,
+  &:focus {
+    color: $color-white;
+    background-color: $color-firebrick;
+  }
+  &:visited {
+    color: $color-white;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin link-effects($underline:false,$inheritVisitedColor:inherit) {
+  transition: color 250ms ease, box-shadow 250ms ease, text-decoration 250ms ease;
+  &:visited {
+    color: $inheritVisitedColor;
+  }
+  &:hover,
+  &:focus {
+    color: $color-lipstick;
+     @if $underline {
+       @include underline();
+     }
+  }
+}

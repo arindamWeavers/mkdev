@@ -1,0 +1,8 @@
+.single-post {
+  .site-main .entry-header.overlay{
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.9);
+    &:before {
+      background: rgba(16,41,56,0.77);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.pagination {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  float: none;
+  text-align: right;
+  border-bottom: 1px solid $color-cloudy-blue;
+  @include media-breakpoint-up(lg) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: none;
+  }
+}
+.page-numbers {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: $font-size--sm;
+  line-height: $line-height--sm;
+  font-weight: $font-weight-body;
+  text-align: center;
+  border-radius: 50%;
+  @include no-underline();
+  &.current {
+    width: 18px;
+    height: 18px;
+    color: $color-white;
+    font-weight: $font-weight-bold;
+    background-color: $color-colonial-blue;
+  }
+  &:hover {
+    border-bottom: none;
+  }
+}
+.prev,
+.next {
+  position: relative;
+  top: auto;
+  right: auto;
+  height: auto;
+  width: auto;
+  margin-left: 0;
+  margin-right: 12px;
+  font-weight: $font-weight-bold;
+  text-indent: 0;
+  background: none;
+}
+.next {
+  margin-right: 0;
+}

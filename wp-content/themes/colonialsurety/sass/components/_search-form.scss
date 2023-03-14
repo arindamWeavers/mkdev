@@ -1,0 +1,108 @@
+.search-form {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  @include media-breakpoint-up(lg) {
+    top: 100px;
+    left: auto;
+    right: 0;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 20px;
+  }
+  &__form-wrapper {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include media-breakpoint-up(xl) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__label {
+    flex-grow: 1;
+  }
+}
+input.search-form__input {
+  width: 100%;
+  max-width: 100%;
+  height: 38px;
+  margin: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: $color-colonial-blue;
+  font-weight: $font-weight-bold;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $color-ice-blue;
+  border: none;
+  border-radius: 6px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  appearance: none;
+  caret-color: $color-lipstick;
+  &::placeholder {
+    color: $color-dark-blue;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.search-form__submit {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  display: block;
+  width: 100%;
+  height: 38px;
+  max-width: 30px;
+  min-height: 38px;
+  padding: 0;
+  color: $color-white;
+  font-size: $font-size;
+  font-weight: $font-weight-bold;
+  background-color: $color-lipstick;
+  border: none;
+  border-radius: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-indent: -999px;
+  text-transform: capitalize;
+  overflow: hidden;
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    width: auto;
+    height: 47px;
+    max-width: 100%;
+    max-height: 47px;
+    padding: 0 38px;
+    line-height: 33px;
+    text-indent: 0;
+  }
+  &:hover,
+  &:focus {
+    background-color: $color-firebrick;
+  }
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 13px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid $color-white;
+    border-right: 2px solid $color-white;
+    transform: rotate(-45deg);
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  &[disabled] {
+    background-color: $color-cool-grey;
+  }
+}

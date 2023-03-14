@@ -1,0 +1,54 @@
+.colonial-trust {
+  padding-bottom: 50px;
+  clear: both;
+  background-color: transparent;
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    padding-bottom: 80px;
+  }
+  &__topper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &:before,
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 1px;
+      width: calc(50% - 45px);
+      background-color: #d8d8d8;
+    }
+    &:after {
+      left: auto;
+      right: 0;
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: -29px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__header {
+    padding-top: 50px;
+    margin-top: 0;   
+    margin-bottom: 36px;
+    font-size: $font-size--lg;
+    font-weight: $font-weight-body;
+    line-height: $line-height--lg;
+    text-align: center;
+    @include media-breakpoint-up(lg) {
+      margin-top: 64px;
+      margin-bottom: 50px;
+    }
+  }
+  .widget .content {
+    padding: 20px 0;
+  }
+  iframe {
+    min-height: 150px;
+  }
+}

@@ -1,0 +1,1 @@
+<a href="<?php echo $atts['link']; ?>" class="button ordered-callout__button"><?php echo $content; ?></a>

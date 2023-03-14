@@ -1,0 +1,51 @@
+@mixin common() {
+  color: $color-colonial-blue;
+  font-family: $font-family-text;
+  font-size: $font-size;
+  line-height: $line-height;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include updated-select-styles();
+  #primary {
+    margin-bottom: 0;
+  }
+  #content .wrapper {
+    max-width: 1200px;
+    width: 100%;
+  }
+  #page {
+    padding-bottom: 0;
+  }
+  
+  .site-content {
+    a {
+      &[href^="tel:"],
+      &[href^="mailto:"]  {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    a,
+    button {
+      &:focus {
+        outline: auto 5px -webkit-focus-ring-color !important;
+      }
+    }
+    .wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+      @include media-breakpoint-up(md) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  main > :last-child > :last-child .content {
+    padding-bottom: 0;
+  }
+}

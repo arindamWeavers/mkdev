@@ -1,0 +1,638 @@
+.page-template-report-claim-page {
+
+  font-family: $font-family-text;
+  background-color: #ffffff;
+  color: $color-dark-blue-grey;
+  //sm: 0,
+  //md: 768px,
+  //tablet-wide: 860px,
+  //lg: 961px,
+  //xl: 1200px,
+  //xxl: 1441px,
+  //xxxl: 1600px
+  #page {
+    padding-bottom: 0;
+  }
+
+  .claimSelectorContainer {
+    .frm_third {
+        padding: 0px 20px !important;
+    }
+  }
+
+  .article__wrapper.wrapper {
+    //max-width: unset !important;
+    @include media-breakpoint-down(xl, $custom-breakpoints) {
+      padding: 0 60px;
+    }
+    @include media-breakpoint-down(md, $custom-breakpoints) {
+      padding: 0 20px;
+    }
+  }
+
+  section {
+    margin-top: 74px;
+  }
+
+  .marquee {
+    min-height: 546px;
+    background-color: $color-dark-blue-grey;
+    padding: 80px 140px;
+    @include media-breakpoint-down(xl, $custom-breakpoints) {
+      padding: 80px 50px;
+    }
+    @include media-breakpoint-down(md, $custom-breakpoints) {
+      padding: 0;
+    }
+
+    .article__wrapper.wrapper {
+      @include media-breakpoint-down(md, $custom-breakpoints) {
+        padding: 0;
+      }
+    }
+
+    .getStarted {
+      text-align: center;
+      color: #ffffff;
+
+      .getStarted__title {
+        font-family: $font-family-text;
+        font-size: 48px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        text-align: center;
+        color: $color-white;
+        padding: 0;
+        @include media-breakpoint-down(md,$custom-breakpoints) {
+          font-size: 36px;
+            padding: 50px 20px 0 20px;
+        }
+      }
+
+      .theContent {
+        font-family: $font-family-text;
+        font-size: 20px;
+        line-height: 1.5;
+        color: $color-white;
+        margin-top: 20px;
+        padding: 0;
+        @include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+          font-size: 16px;
+          padding: 0 20px 50px 20px;
+        }
+
+      }
+    }
+
+  }
+
+.claim-form-modal {
+  .hideMe{
+    display: none;
+  }
+  display: none;
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 99999;
+  background: $color-white;
+  width: 100%;
+  //height: auto;
+  height:100%;
+  // overflow: scroll;
+  transition: all .2s;
+  font-family: $font-family-text;
+  .modal-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 9;
+    @include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+      top: 20px;
+      right: 20px;
+    }
+  }
+  .form-wrap {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+
+    div.frm_forms{
+      max-width: 760px;
+    &.frm_style_formidable-style.with_frm_style .frm_form_fields fieldset {
+      .frm_form_title {
+        margin-top: 80px;
+        @include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+          font-family: $font-family-text;
+          font-size: 36px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.22;
+          letter-spacing: normal;
+          color: $color-dark-blue-grey;
+          margin-top: 50px;
+        }
+      }
+
+      .frm_description {
+        margin: 0 0 28px 0;
+        @include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+          margin-top: 0;
+        }
+
+        p {
+          font-size: 13px;
+          @include media-breakpoint-down(tablet-wide, $custom-breakpoints) {
+            font-family: $font-family-text;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.85;
+            letter-spacing: normal;
+            color: $color-dark-blue-grey;
+          }
+        }
+      }
+      .frm_fields_container{
+        .form-field{
+          &.frm_form_field.frm_section_heading{
+            padding: 40px 0 0 0;
+            h3{
+              padding: 0 0 16px 0;
+            }
+          }
+          &.other{
+    textarea{
+      height: 200px;
+      margin-top: -45px;
+      background-color: $color-ice-blue;
+    }
+          }
+        }
+      }
+
+    }
+  }
+  }
+    //hide current date field
+  //#frm_field_67_container, #frm_field_84_container {
+  //  display: none;
+  //}
+
+
+  .frm_message {
+    margin: 0;
+    padding: 0;
+  }
+  .form-wrap {
+    .frm_submit {
+      @include media-breakpoint-down(md,$custom-breakpoints) {
+        text-align: center;
+      }
+    }
+    .frm_cancel {
+      font-family: $font-family-text;
+      margin-left: 25px;
+      color: $color-dark-blue-grey;
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: bold;
+      display: inline-block;
+      cursor: pointer;
+      @include media-breakpoint-down(md,$custom-breakpoints) {
+        margin-left: 0;
+        margin-top: 10px;
+      } 
+      &::after {
+        content: '';
+        background: $color-lipstick;
+        height: 1px;
+        width: 100%;
+        display: block;
+        position: relative;
+        bottom: 3px;
+      }
+    }
+  }
+  .form-confirmation {
+    text-align: center;
+    color: $color-dark-blue-grey;
+    height: 100%;
+    width: 960px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    z-index: 2;
+    @media (max-width: 960px) {
+      padding: 0 3%;
+    }
+    @include media-breakpoint-down(md, $custom-breakpoints) {
+      width: 100%;
+      overflow: scroll;
+    }
+    img {
+      width: 48px;
+      height: 48px;
+      margin-top: 100px;
+    }
+    .header {
+      font-size: 36px;
+      line-height: 1.22;
+      margin-bottom: 60px;
+      margin-top: 20px;
+      font-weight: normal;
+    }
+    .info {
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 0;
+      @include media-breakpoint-down(md, $custom-breakpoints) {
+        flex-flow: column;
+        padding: 20px;
+      }
+      .subheader {
+        font-size: 20px;
+        font-weight: $font-weight-semibold;
+        line-height: normal;
+        margin-bottom: 10px;
+      }
+      .copy {
+        font-size: 16px;
+        td:nth-child(2n) {
+          text-align: left;
+          padding-left: 70px;
+        }
+      }
+      .info--left {
+        padding-right: 120px;
+        width: 50%;
+        text-align: left;
+        @media (max-width: 960px) {
+          padding-right: 10%;
+        }
+        @include media-breakpoint-down(md, $custom-breakpoints) {
+          width: 100%;
+          padding-right: 0;
+        }
+        tr {
+          td:first-child {
+            min-width: 108px;
+          }
+        }
+      }
+      .info--right {
+        border-left: 1px solid #979797;
+        padding-left: 120px;
+        width: 50%;
+        text-align: left;
+        @media (max-width: 960px) {
+          padding-left: 10%;
+        }
+        @include media-breakpoint-down(md, $custom-breakpoints) {
+          width: 100%;
+          padding-left: 0;
+          border-left: 0;
+        }
+        a {
+          font-size: 16px;
+          line-height: 1.5;
+          font-weight: $font-weight-bold;
+          color: $color-dark-blue-grey;
+          display: inline-block;
+          &:visited {
+            color: $color-dark-blue-grey;
+          }
+          &::after {
+            content: '';
+            background: $color-lipstick;
+            height: 1px;
+            width: 100%;
+            display: block;
+            position: relative;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .confirm-close {
+      margin-top: 60px;
+      @include media-breakpoint-down(md, $custom-breakpoints) {
+        margin: 30px 0;
+      }
+      .confirm-close-modal {
+        border: 2px solid $color-lipstick;
+        background-color: $color-white;
+        font-weight: bold;
+        border-radius: 6px;
+        font-size: 16px;
+        padding: 16px 0;
+        width: 160px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+      #expect {
+        text-align: center;
+        margin-top: 70px;
+        @include media-breakpoint-down(md, $custom-breakpoints) {
+          margin-top: 0;
+          margin-bottom: 20.5px;
+          padding-top: 49px;
+        }
+        h2 {
+          display: block;
+          font-family: $font-family-text;
+          font-size: 36px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.22;
+          letter-spacing: normal;
+          text-align: center;
+          color: $color-dark-blue-grey;
+          margin-bottom: 45px;
+          @include media-breakpoint-down(md, $custom-breakpoints) {
+            font-size: 24px;
+            line-height: normal;
+            margin-top: 0;
+            margin-bottom: 30px;
+          }
+        }
+
+        .cards {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+
+          @include media-breakpoint-down(sm, $custom-breakpoints) {
+              flex-direction: column;
+            }
+        }
+
+        .card {
+          flex: 1 0 33%;
+          color:$color-dark-blue-grey;
+          @include media-breakpoint-down(md, $custom-breakpoints) {
+            padding-bottom: 20px;
+            margin: 0 0 30px 0;
+          }
+          p {
+            font-family: $font-family-text;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              font-size: 16px;
+              line-height: 1.5;
+            }
+          }
+          .cardIcon {
+            min-height: 38px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              height: auto;
+            }
+          }
+
+          .cardTitile {
+            font-family: $font-family-text;
+            color:$color-dark-blue-grey;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 7px;
+            line-height: normal;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              margin-bottom: 10px;
+            }
+          }
+
+          &:first-child {
+            padding-right: 20px;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              padding: 0;
+            }
+            img {
+              width: 34px;
+              height: 21px;
+            }
+          }
+
+          &:nth-child(2) {
+            padding: 0 20px;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              padding: 0;
+            }
+            img {
+              width: 36px;
+              height: 38px;
+            }
+          }
+
+          &:last-child {
+            padding-left: 20px;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              padding: 0;
+            }
+            img {
+              width: 45px;
+              height: 37px;
+            }
+          }
+        }
+      }
+
+      #dwnloadFrms {
+        text-align: center;
+        padding: 63px 100px 31px 100px;
+        border-radius: 6px;
+        @include media-breakpoint-down(md, $custom-breakpoints) {
+          padding: 50px 21px 21px;
+          margin-top: 0;
+          margin-bottom: 94px;
+        }
+
+        h2 {
+          margin: 0 auto 50px auto;
+          font-family: $font-family-text;
+          font-size: 36px;
+          line-height: 1.22;
+          color: $color-dark-blue-grey;
+          font-weight: normal;
+          @include media-breakpoint-down(md, $custom-breakpoints) {
+            font-size: 24px;
+            line-height: normal;
+            margin: 0 auto 23px auto;
+          }
+        }
+
+        &.grayBox {
+          object-fit: contain;
+          background: url("images/rectangle.png");
+        }
+
+        .container {
+          display: flex;
+          flex-direction: row;
+          //@include media-breakpoint-down(xl, $custom-breakpoints) {
+          //  flex-direction: row;
+          //}
+          @include media-breakpoint-down(xl, $custom-breakpoints) {
+            //flex-direction: column;
+            padding: 40px 65px;
+          }
+          @include media-breakpoint-down(sm, $custom-breakpoints) {
+           flex-direction: column;
+            padding: 0;
+          }
+
+          hr {
+            display: none;
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              display: block;
+              width: 80px;
+              margin: 40px auto;
+            }
+          }
+          #contactHalf{
+            @include media-breakpoint-down(md, $custom-breakpoints) {
+              padding-left: 65px;
+              table{
+                tbody{
+                  tr{
+                    display:block;
+                    padding-bottom: 20px;
+                    td{
+                      display:block;
+                      padding: 0;
+                    }
+                  }
+                }
+              }
+            }
+            @include media-breakpoint-down(sm, $custom-breakpoints) {
+              padding-left: 0;
+              table{
+                tbody{
+                  tr{
+                    display:table-row;
+                    padding-bottom: 20px;
+                    td{
+                      display:table-cell;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .table {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @include media-breakpoint-down(xl, $custom-breakpoints) {
+              flex-direction: column;
+              border-right:  1px solid $color-cool-grey;
+            }
+            @include media-breakpoint-down(sm, $custom-breakpoints) {
+              flex-direction: row;
+              border-right: none;
+            }
+
+            .halfWidth {
+              flex: 0 0 43%;
+              padding-bottom: 36px;
+              text-align: left;
+              @include media-breakpoint-down(md, $custom-breakpoints) {
+                flex: 0 0 50%;
+                &:nth-of-type(2), &:nth-of-type(4){
+                  //text-align: right;
+                  text-align: left;
+                }
+              }
+
+               
+              &:nth-last-of-type(-n+2) {
+                padding-bottom: 0;
+                @include media-breakpoint-down(xl, $custom-breakpoints) {
+                  padding-bottom: 36px;
+                }
+                @include media-breakpoint-down(sm, $custom-breakpoints) {
+                  padding-bottom: 0;
+                }
+              }
+              .link{
+                font-size: 20px;
+                @include media-breakpoint-down(md, $custom-breakpoints) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+
+          .half {
+            flex: 0 0 50%;
+            &:first-child {
+              border-right: 1px solid $color-cool-grey;
+              @include media-breakpoint-down(md, $custom-breakpoints) {
+                border-right: none;
+              }
+            }
+            table {
+              margin-left: 118px;
+              width: 89%;
+
+              @include media-breakpoint-down(md, $custom-breakpoints) {
+                width: 100%;
+                margin: 0;
+              }
+
+              td {
+                text-align: left;
+                padding-bottom: 29px;
+                vertical-align: top;
+                @include media-breakpoint-down(md, $custom-breakpoints) {
+                  padding-left: 23px;
+                  font-size: 16px;
+                  line-height: 1.5;
+                }
+
+                &.titleCol {
+                  font-family: $font-family-text;
+                  font-size: 16px;
+                  font-weight: bold;
+                  font-style: normal;
+                  font-stretch: normal;
+                  line-height: 1.5;
+                  letter-spacing: normal;
+                  color: $color-dark-blue-grey;
+                  @include media-breakpoint-down(md, $custom-breakpoints) {
+                    padding-left: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .colonial-trust__topper,
+      .colonial-trust__header {
+        display: none;
+      }
+      .colonial-trust {
+        padding-bottom: 51px;
+        @include media-breakpoint-down(md, $custom-breakpoints) {
+          padding: 20px;
+        }
+      }
+    }

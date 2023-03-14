@@ -1,0 +1,74 @@
+//------------------------------------------------------------
+// Colors
+//------------------------------------------------------------
+$color-colonial-blue: #102938;
+$color-ice-blue: #eef2f4;
+$color-tomato: #f9484e;
+$color-lipstick: #cf2127;
+$color-firebrick: #a60c11;
+$color-lipstick-light: #ffbbbd;
+$color-tomato: #d60000;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-cool-grey: #94a5af;
+$color-dark-blue: #214357;
+$color-dark-blue-grey: #102938;
+$color-light-blue: #76ccff;
+$color-seafoam-blue: #76c8b5;
+$color-cloudy-blue: #bcc8cf;
+$color-mint-green: #50e3c2;
+
+
+//------------------------------------------------------------
+// Typography
+//------------------------------------------------------------
+$font-size            : 16px;
+$font-size--sm        : 13px;
+$font-size--md        : 24px;
+$font-size--lg        : 36px;
+$font-size--xl        : 48px;
+$font-family-text     : 'IBM Plex Sans', sans-serif;
+$font-weight-body     : normal;
+$font-weight-bold     : 700;
+$font-weight-semibold : 600;
+
+$line-height    : 24px;
+$line-height--sm: 18px;
+$line-height--md: 33px;
+$line-height--lg: 50px;
+$line-height--xl: 58px;
+
+//------------------------------------------------------------
+// Grid
+//------------------------------------------------------------
+$grid-breakpoints: (
+  sm: 0,
+  md: 768px,
+  md-alt: 860px,
+  lg: 961px,
+  xl: 1200px,
+  xxl: 1441px,
+  xxxl: 1600px
+);
+
+$custom-breakpoints: (
+  sm: 0,
+  md: 768px,
+  tablet-wide: 860px,
+  lg: 961px,
+  xl: 1200px,
+  xxl: 1441px,
+  xxxl: 1600px
+);
+
+//------------------------------------------------------------
+// Transitions
+//------------------------------------------------------------
+$transition-length: 250ms;
+$transition-type: cubic-bezier(1, 0.25, 0.25, .8);
+
+//------------------------------------------------------------
+//  Icon placment Offset
+//------------------------------------------------------------
+
+$icon-offset-top: 50px;

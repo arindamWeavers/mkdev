@@ -1,0 +1,104 @@
+.page-template-contact-page {
+	background-color: transparent;
+	#page {
+		padding-bottom: 0;
+	}
+	.colonial-trust {
+		padding-bottom: 51px;
+		@include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+			padding-bottom: 21px;
+		}
+		.trust-pilot.widget {
+			padding-top: 43px;
+			@include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+				padding-top: 30px;
+			}
+		}
+	}
+}
+
+.contact-marquee {
+	background: $color-dark-blue-grey;
+	font-family: $font-family-text;
+	padding: 60px 0;
+	@include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+		padding: 50px 0 40px;
+	}
+	.marquee__title {
+		color: $color-white;
+		text-align: center;
+		font-size: 48px;
+		font-weight: normal;
+		line-height: 1.21;
+		margin-bottom: 30px;
+		@include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+			font-size: 36px;
+			line-height: 1.11;
+		}
+	}
+	.marquee__icon-boxes {
+		background: $color-white;
+		display: flex;
+		flex-flow: row wrap;
+		max-width: 1160px;
+		width: 80%;
+		margin: auto;
+		padding: 30px 50px 0 50px;
+		@include media-breakpoint-down(md, $custom-breakpoints) {
+          width: 89.334%;
+        }
+		.iconbox__single {
+			width: 33.33%;
+			text-align: center;
+			margin-bottom: 30px;
+			@include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+				width: 100%;
+			}
+			.icon__image {
+				width: auto;
+				height: 35px;
+				margin-bottom: 20px;
+			}
+			.icon__title {
+				color: $color-dark-blue-grey;
+				font-weight: $font-weight-semibold;
+				font-size: 20px;
+				line-height: 1;
+				margin-bottom: 10px;
+			}
+			.icon__copy {
+				color: $color-dark-blue-grey;
+				font-size: 20px;
+				font-weight: normal;
+				h4 {
+					font-weight: normal;
+					font-size: 16px;
+					margin:0;
+				}
+			}
+		}
+	}
+	.marquee__subtext {
+		color: $color-white;
+		margin-top: 30px;
+		font-size: 16px;
+		line-height: 1.5;
+		a {
+			font-weight: $font-weight-bold;
+			display: inline-block;
+			color: $color-white;
+			&:visited {
+				color: $color-white;
+			}
+			&::after {
+				content: '';
+				background: $color-lipstick;
+				height: 1px;
+				width: 100%;
+				display: block;
+				position: relative;
+				bottom: 0;
+			}
+		}
+	}
+}

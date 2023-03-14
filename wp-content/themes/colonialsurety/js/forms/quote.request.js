@@ -1,0 +1,1 @@
+jQuery(function(a){a('input[name="amount_per_year"]').change(function(){console.log(a(this).val()),a('input[name="premium_per_year"]').val(Math.round(.008*a(this).val(),0))})});

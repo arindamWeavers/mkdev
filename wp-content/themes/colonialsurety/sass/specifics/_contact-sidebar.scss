@@ -1,0 +1,47 @@
+.contact-sidebar {
+    float: left;
+    width: 260px;
+    margin-top: 60px;
+    font-family: $font-family-text;
+    @include media-breakpoint-down(tablet-wide,$custom-breakpoints) {
+		display: none;
+	}
+    .sidebar__inner-box {
+    	background-color: $color-ice-blue;
+    	color: $color-dark-blue-grey;
+    	padding: 30px 16px;
+    	border-radius: 6px;
+    	.inner-box__header {
+			font-size: 20px;
+			line-height: 1.4;
+			font-weight: $font-weight-semibold;
+    	}
+    	.inner-box__copy {
+			font-size: 14px;
+			line-height: 1.5;
+			font-weight: normal;
+			margin: 10px 0 20px;
+    	}
+    	.inner-box__link {
+			a {
+				font-size: 16px;
+				line-height: 1.5;
+				font-weight: $font-weight-bold;
+				color: $color-dark-blue-grey;
+				display: inline-block;
+				&:visited {
+					color: $color-dark-blue-grey;
+				}
+				&::after {
+					content: '';
+					background: $color-lipstick;
+					height: 1px;
+					width: 100%;
+					display: block;
+					position: relative;
+					bottom: 0;
+				}
+			}
+    	}
+    }
+}

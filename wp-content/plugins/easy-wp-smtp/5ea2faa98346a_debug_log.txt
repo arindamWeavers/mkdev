@@ -1,0 +1,19 @@
+Easy WP SMTP debug log file
+
+CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.CLIENT -> SERVER: EHLO localhost
+SMTP Error: Could not authenticate.CLIENT -> SERVER: QUIT
+SMTP Error: Could not authenticate.

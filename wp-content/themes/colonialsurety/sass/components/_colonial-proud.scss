@@ -1,0 +1,79 @@
+.colonial-proud {
+  padding-top: 40px;
+  padding-bottom: 45px;
+  background-color: $color-ice-blue;
+  @include media-breakpoint-up(lg) {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+  &__item {
+    margin-bottom: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: inherit;
+    @include no-underline();
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    @include media-breakpoint-up(md) {
+      width: 300px;
+      margin-bottom: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  &__image {
+    display: inline-block;
+    height: 96px;
+    margin-bottom: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 10px;
+    }
+    &--usa {
+      width: 168px;
+      background-image: url(images/updated/usa.png);
+    }
+    &--nowriting {
+      width: 187px;
+      background-image: url(images/updated/nowriting.png);
+    }
+    &--treasury {
+      width: 94px;
+      background-image: url(images/updated/treasury-seal.png);
+    }
+  }
+  &__modal-header {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: $font-size--md;
+    line-height: $line-height--md;
+    font-weight: $font-weight-bold;
+  }
+  a {
+    &:hover,
+    &:focus,
+    &:visited {
+      color: inherit;
+    }
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p + p {
+    margin-top: 20px;
+  }
+}

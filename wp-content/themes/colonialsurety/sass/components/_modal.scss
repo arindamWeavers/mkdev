@@ -1,0 +1,114 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-color: $color-colonial-blue;
+  background-color: rgba($color-colonial-blue,0.8);
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transform: scale(0);
+  z-index: 3000;
+  user-select: none;
+  transition: opacity $transition-length $transition-type,visibility $transition-length $transition-type $transition-length,overflow $transition-length $transition-type $transition-length,transform $transition-length $transition-type $transition-length;
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+    transform: scale(1);
+    user-select: auto;
+    transition: opacity $transition-length $transition-type;
+  }
+  &--video {
+    .modal__body {
+      @include media-breakpoint-up(md) {
+        padding: 0;
+        overflow: visible;
+      }
+    }
+    .modal__responsive-video {
+      position: relative;
+      height:0;
+      width: 100%;
+      margin-top: 40px;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-bottom: -6px;
+    }
+  }
+  &--video,
+  &--floating {
+    .modal__body {
+      @include media-breakpoint-up(md) {
+        margin-top: 200px;
+        margin-bottom: 200px;
+        overflow: visible;
+     }
+    }
+    .close {
+      @include media-breakpoint-up(md) {
+        top: -40px;
+        right: 0; 
+        &:before,
+        &:after {
+          background-color: $color-white;
+        }
+      }
+    }
+  }
+  &__body {
+    position: relative;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    max-width: 760px;
+    min-height: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: $color-white;
+    transform: translateX(-50%);
+    @include media-breakpoint-up(md) {
+      min-height: auto;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      padding-left: 40px;
+      padding-right: 40px;
+      overflow: auto;
+    }
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;  
+    font-size: $font-size--lg;
+    line-height: $line-height--lg;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 60px;  
+      font-size: $font-size--xl;
+      line-height: $line-height--xl;
+    }
+  }
+}
+
+.modal-is-open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+.modal-is-open #wpadminbar { 
+  display: none;
+}
